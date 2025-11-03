@@ -1,11 +1,15 @@
-<h1>Контакты</h1>
-<ul>
+<h1 class="contacts-title">Контакты</h1>
+
+<ul class="contacts-list">
     {% for contact in contacts %}
-        <li>
-            <a href="{% url 'contacts_detail' contact.pk %}">
+        <li class="contact-item">
+            <a href="{% url 'contacts_detail' contact.pk %}" class="contact-link">
                 {{ contact.last_name }} {{ contact.first_name }}
             </a>
         </li>
+    {% empty %}
+        <li class="contact-item empty">Контактов пока нет</li>
     {% endfor %}
 </ul>
-<a href="{% url 'contact_add' %}">Добавить новый контакт</a>
+
+<a href="{% url 'contact_add' %}" class="add-contact-btn">Добавить новый контакт</a>

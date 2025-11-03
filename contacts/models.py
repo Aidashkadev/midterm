@@ -1,6 +1,6 @@
 from django.db import models
 class Contact(models.Model):
-    laste_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50, blank=True, null=True)
     phone = models.CharField(max_length=20)
